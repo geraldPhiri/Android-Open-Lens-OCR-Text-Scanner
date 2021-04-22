@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.technikh.imagetextgrabber", appContext.getPackageName());
+        assertEquals("com.technikh.com.technikh.imagetextgrabber", appContext.getPackageName());
     }
 }
