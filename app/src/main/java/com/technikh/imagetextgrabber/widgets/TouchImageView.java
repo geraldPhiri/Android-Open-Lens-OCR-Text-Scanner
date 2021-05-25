@@ -1267,13 +1267,14 @@ public class TouchImageView extends AppCompatImageView {
         textSelectionInProgress = false;
     }
 
+
+
     private void selectWordOnTouch(int touchX, int touchY, boolean longPressMode) {
         List<ImageView> ivs=new ArrayList(Arrays.asList((ImageView)((MainActivity) mContext).findViewById(R.id.f),
                 (ImageView)((MainActivity) mContext).findViewById(R.id.highlight),
                 (ImageView)((MainActivity) mContext).findViewById(R.id.add_highlight),
                 (ImageView)((MainActivity) mContext).findViewById(R.id.delete_highlight)));
-        final String[] color = new String[1];
-        final String[] note = new String[1];
+
         try {
 
 
@@ -1297,8 +1298,7 @@ public class TouchImageView extends AppCompatImageView {
                                     MainActivity.currentUri
                             );
 
-                            color[0] =image.get(0).color;
-                            note[0] =image.get(0).note;
+
 
 
 
@@ -1563,6 +1563,12 @@ public class TouchImageView extends AppCompatImageView {
 
 
         }catch (Exception e){
+            Toast.makeText(mContext,e.toString(),Toast.LENGTH_LONG).show();
+        }
+        catch (Error e){
+            Toast.makeText(mContext,e.toString(),Toast.LENGTH_LONG).show();
+        }
+        catch (Throwable e){
             Toast.makeText(mContext,e.toString(),Toast.LENGTH_LONG).show();
         }
     }
